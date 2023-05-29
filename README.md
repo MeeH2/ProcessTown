@@ -1,10 +1,7 @@
 # ProcessTown
-MuddyTown
+Muddy Town - Path Paving Optimization
 
-
-Overview
-This python code takes in a file named MiniTown.dat and displays the file in a standard format and paving plan format. Its objective is to find the minimum cost to pave a street using Prim’s algorithm.
-
+Muddy Town is a Python project for optimizing the path paving process in a hypothetical town. Given a number of buildings and streets, the project generates a town, and implements Prim's Algorithm to find the minimum cost to pave all the streets in the town.
 
 Standard Format
         The standard format for displaying, reading, and writing town data
@@ -20,16 +17,43 @@ Paving Plan Format
                 “<Building_Address>”, “<Building_Address>”
                 “<Building_Address>”, “<Building_Address>”
 
+Features
 
-How to Run the Program
-Unfortunately, I didn’t get everything done so I have two files for muddytown one that is more functional but cannot be used via command line which is named muddytown.py and another that is my work in progress of switching my code to work via command line which is named commandMT.py.
+Reads map data from a specified file.
+Writes map data and paving plans to specified files.
+Generates a random town with a given number of buildings and streets.
+Implements Prim's Algorithm to find the minimum cost of paving all the streets in the town.
+Visualizes the generated map using the NetworkX library.
+Installation
 
+You'll need to have Python installed on your machine (3.6 or later recommended).
 
-The muddytown.py will take in a file named MiniTown.dat and display it in standard and paving plan format. Unfortunately it doesn’t display the lowest cost unless you run primAlg function and then change line 120 to map = read_map() to show the that paving plan and the cost to make it. I also forgot to hard code the paving cost into the file so instead of printing the cost in the new file it shows the minimum cost via console instead.
-To run creat_town function you will need to attach the following file named StreetNameCleaner.txt so it pulls up a list of Denver streets that it can randomize into the function. Create_town function takes in two parameters the number of buildings you want and the number of streets. I tested it with 34 buildings and 50 streets but that can be changed.
+Clone the repository to your local machine.
+Run pip install -r requirements.txt to install necessary packages.
+Usage
 
+To run the program, you'll use python muddytown.py with different command line arguments:
 
-To see a visual representation of the graph you’ll need to import networkx as nx.
+-r <mapfile>: Read the map from <mapfile>
+-w <mapfile>: Write the map to <mapfile>
+-wp <mapfile>: Write the paving plan to <mapfile>
+-t <buildings> <streets>: Generate a town with <buildings> buildings and <streets> streets
+-p: Execute Prim's Algorithm on the current map
+-v: Visualize the map using NetworkX
+Examples:
 
+css
+Copy code
+python muddytown.py -r MiniTown.dat
+python muddytown.py -w MiniTown.dat
+python muddytown.py -wp PavingPlan.dat
+python muddytown.py -t 34 50
+python muddytown.py -p
+python muddytown.py -v
+Contributing
 
-I somehow messed up my commanMT.py and it may not be functioning anymore which is frustrating
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+License
+
+MIT
