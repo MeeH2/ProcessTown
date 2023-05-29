@@ -1,6 +1,6 @@
 # ProcessTown
-Muddy Town - Path Paving Optimization
-
+**Muddy Town - Path Paving Optimization
+**
 Muddy Town is a Python project for optimizing the path paving process in a hypothetical town. Given a number of buildings and streets, the project generates a town, and implements Prim's Algorithm to find the minimum cost to pave all the streets in the town.
 
 Standard Format
